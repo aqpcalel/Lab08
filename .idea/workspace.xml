@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2779599e-b2aa-4ead-8b6c-b1aa4798807f" name="Default" comment="Lanzamiento Inicial. Intenten crear branches para trabajar de forma segura.">
+    <list default="true" id="2779599e-b2aa-4ead-8b6c-b1aa4798807f" name="Default" comment="Funcionalidad basica.">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lab09.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lab09.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/users/UsersControllerAdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/users/UsersControllerAdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/WEB-INF/appengine-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/appengine-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/war/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/war/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/access/AccessControllerDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/access/AccessControllerDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/access/AccessControllerIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/access/AccessControllerIndex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/access/AccessControllerView.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/access/AccessControllerView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/resource/ResourcesControllerAdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/resource/ResourcesControllerDelete.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/resource/ResourcesControllerIndex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/resource/ResourcesControllerView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/roles/RolesControllerAdd.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/roles/RolesControllerAdd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/roles/RolesControllerDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/roles/RolesControllerDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/roles/RolesControllerIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/roles/RolesControllerIndex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/roles/RolesControllerView.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/roles/RolesControllerView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/users/UsersControllerAdd.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/users/UsersControllerAdd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/users/UsersControllerDelete.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/users/UsersControllerDelete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/users/UsersControllerIndex.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/users/UsersControllerIndex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/controller/users/UsersControllerView.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/controller/users/UsersControllerView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/war/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/war/WEB-INF/classes/model/User.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/war/WEB-INF/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +36,8 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="629">
+              <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1479#1480#0" expanded="true" />
@@ -38,8 +50,8 @@
       <file leaf-file-name="appengine-web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/WEB-INF/appengine-web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -47,20 +59,41 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/war/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
+            <state relative-caret-position="620">
+              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersControllerAdd.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UsersControllerAdd.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/users/UsersControllerAdd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="340">
+              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding>
                 <element signature="e#227#254#0" expanded="true" />
                 <element signature="method#doGet#0;class#UsersControllerAdd#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccessControllerDelete.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/access/AccessControllerDelete.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="e#228#255#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,8 +155,9 @@
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa176.14748/GmailServlet.java" />
         <option value="$PROJECT_DIR$/war/WEB-INF/appengine-web.xml" />
         <option value="$PROJECT_DIR$/src/model/User.java" />
-        <option value="$PROJECT_DIR$/src/controller/users/UsersControllerAdd.java" />
         <option value="$PROJECT_DIR$/war/index.html" />
+        <option value="$PROJECT_DIR$/src/controller/users/UsersControllerAdd.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -162,19 +196,6 @@
               <item name="Lab09" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab09" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lab09" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab09" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Lab09" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab09" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lab09" type="b2602c69:ProjectViewProjectNode" />
@@ -298,7 +319,7 @@
       <option name="presentableId" value="Default" />
       <updated>1528406594376</updated>
       <workItem from="1528406596826" duration="3465000" />
-      <workItem from="1528759543471" duration="10244000" />
+      <workItem from="1528759543471" duration="13097000" />
     </task>
     <task id="LOCAL-00001" summary="Lanzamiento Inicial. Intenten crear branches para trabajar de forma segura.">
       <created>1528408256446</created>
@@ -307,14 +328,71 @@
       <option name="project" value="LOCAL" />
       <updated>1528408256446</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="He puesto espacios entre los servlets y sus mappings para que buscar uno sea mas facil.">
+      <created>1528769854523</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528769854523</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Puse el tag &lt;sessions-enabled&gt; (linea 5) para que se puedan usar Sesiones en la aplicacion (Variables de Sesion en indice-ejemplos.appspot.com). Las Sesiones se utilizaran para que cuando el usuario inicie sesion, no se pierda su login al moverse entre las paginas.">
+      <created>1528770182632</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528770182632</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Aun deben cambiar el nombre de la aplicacion (lab08-SU_CUI) con el que deployaran.">
+      <created>1528770257691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1528770257691</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Espacios entre servlets y mapping para una mejor lectura.">
+      <created>1528770284160</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1528770284160</updated>
+    </task>
+    <task id="LOCAL-00006" summary="index.html provisional. Lo uso para probar mis recursos. Uds. usenlo para lo que necesiten, una vez se termine el backend, recien se hará el frontend.">
+      <created>1528772027367</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528772027367</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Primera edicion con funcionalidad basica.">
+      <created>1528772065813</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1528772065813</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Este Servlet:&#10;&#10;-Se accede al iniciar sesion con Google (Por ahora)&#10;-Comprueba si existe una sesion.&#10;-Comprueba si existe un usuario, sino, lo crea.">
+      <created>1528772167290</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1528772167290</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Funcionalidad basica.">
+      <created>1528772208557</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1528772208557</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13709000" />
+    <option name="totallyTimeSpent" value="16562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="72" width="1848" height="932" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32928312" />
@@ -335,9 +413,9 @@
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32928312" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32928312" />
       <window_info id="Persistence" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49939248" visible="true" weight="0.14737992" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49939248" visible="true" weight="0.14737992" />
       <window_info id="Web" order="7" sideWeight="0.50060755" side_tool="true" weight="0.24961714" />
       <window_info anchor="right" id="Google Cloud Storage" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -360,7 +438,27 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Lanzamiento Inicial. Intenten crear branches para trabajar de forma segura." />
-    <option name="LAST_COMMIT_MESSAGE" value="Lanzamiento Inicial. Intenten crear branches para trabajar de forma segura." />
+    <MESSAGE value="He puesto espacios entre los servlets y sus mappings para que buscar uno sea mas facil." />
+    <MESSAGE value="Puse el tag &lt;sessions-enabled&gt; (linea 5) para que se puedan usar Sesiones en la aplicacion (Variables de Sesion en indice-ejemplos.appspot.com). Las Sesiones se utilizaran para que cuando el usuario inicie sesion, no se pierda su login al moverse entre las paginas." />
+    <MESSAGE value="Aun deben cambiar el nombre de la aplicacion (lab08-SU_CUI) con el que deployaran." />
+    <MESSAGE value="Espacios entre servlets y mapping para una mejor lectura." />
+    <MESSAGE value="index.html provisional. Lo uso para probar mis recursos. Uds. usenlo para lo que necesiten, una vez se termine el backend, recien se hará el frontend." />
+    <MESSAGE value="Primera edicion con funcionalidad basica." />
+    <MESSAGE value="Este Servlet:&#10;&#10;-Se accede al iniciar sesion con Google (Por ahora)&#10;-Comprueba si existe una sesion.&#10;-Comprueba si existe un usuario, sino, lo crea." />
+    <MESSAGE value="Funcionalidad basica." />
+    <option name="LAST_COMMIT_MESSAGE" value="Funcionalidad basica." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/User.java</url>
+          <line>42</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/controller/resources/ResourcesControllerView.java">
@@ -420,16 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/access/AccessControllerDelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="e#228#255#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -580,9 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -693,32 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/war/WEB-INF/appengine-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1479#1480#0" expanded="true" />
-            <element signature="e#1518#1519#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/war/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="68" column="27" selection-start-line="68" selection-start-column="27" selection-end-line="68" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa5688.4603/Comprobar.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -729,14 +788,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/war/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="27" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/WEB-INF/appengine-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/war/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/access/AccessControllerDelete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="e#228#255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/users/UsersControllerAdd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="340">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding>
             <element signature="e#227#254#0" expanded="true" />
             <element signature="method#doGet#0;class#UsersControllerAdd#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
         </state>
       </provider>
     </entry>
