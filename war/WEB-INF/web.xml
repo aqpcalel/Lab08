@@ -1,4 +1,5 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
     <servlet>
         <servlet-name>UsersControllerAdd</servlet-name>
         <servlet-class>controller.users.UsersControllerAdd</servlet-class>
@@ -7,6 +8,7 @@
         <servlet-name>UsersControllerAdd</servlet-name>
         <url-pattern>/users/add</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>UsersControllerIndex</servlet-name>
         <servlet-class>controller.users.UsersControllerIndex</servlet-class>
@@ -15,6 +17,7 @@
         <servlet-name>UsersControllerIndex</servlet-name>
         <url-pattern>/users</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>UsersControllerView</servlet-name>
         <servlet-class>controller.users.UsersControllerView</servlet-class>
@@ -23,6 +26,7 @@
         <servlet-name>UsersControllerView</servlet-name>
         <url-pattern>/users/view</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>UsersControllerDelete</servlet-name>
         <servlet-class>controller.users.UsersControllerDelete</servlet-class>
@@ -31,6 +35,10 @@
         <servlet-name>UsersControllerDelete</servlet-name>
         <url-pattern>/users/delete</url-pattern>
     </servlet-mapping>
+
+
+
+
     <servlet>
         <servlet-name>RolesControllerAdd</servlet-name>
         <servlet-class>controller.roles.RolesControllerAdd</servlet-class>
@@ -39,6 +47,7 @@
         <servlet-name>RolesControllerAdd</servlet-name>
         <url-pattern>/roles/add</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>RolesControllerIndex</servlet-name>
         <servlet-class>controller.roles.RolesControllerIndex</servlet-class>
@@ -47,6 +56,7 @@
         <servlet-name>RolesControllerIndex</servlet-name>
         <url-pattern>/roles</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>RolesControllerView</servlet-name>
         <servlet-class>controller.roles.RolesControllerView</servlet-class>
@@ -55,6 +65,7 @@
         <servlet-name>RolesControllerView</servlet-name>
         <url-pattern>/roles/view</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>RolesControllerDelete</servlet-name>
         <servlet-class>controller.roles.RolesControllerDelete</servlet-class>
@@ -63,6 +74,10 @@
         <servlet-name>RolesControllerDelete</servlet-name>
         <url-pattern>/roles/delete</url-pattern>
     </servlet-mapping>
+
+
+
+
     <servlet>
         <servlet-name>ResourcesControllerAdd</servlet-name>
         <servlet-class>controller.resources.ResourcesControllerAdd</servlet-class>
@@ -71,6 +86,7 @@
         <servlet-name>ResourcesControllerAdd</servlet-name>
         <url-pattern>/resources/add</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>ResourcesControllerIndex</servlet-name>
         <servlet-class>controller.resources.ResourcesControllerIndex</servlet-class>
@@ -79,6 +95,7 @@
         <servlet-name>ResourcesControllerIndex</servlet-name>
         <url-pattern>/resources</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>ResourcesControllerView</servlet-name>
         <servlet-class>controller.resources.ResourcesControllerView</servlet-class>
@@ -87,6 +104,7 @@
         <servlet-name>ResourcesControllerView</servlet-name>
         <url-pattern>/resources/view</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>ResourcesControllerDelete</servlet-name>
         <servlet-class>controller.resources.ResourcesControllerDelete</servlet-class>
@@ -95,6 +113,10 @@
         <servlet-name>ResourcesControllerDelete</servlet-name>
         <url-pattern>/resources/delete</url-pattern>
     </servlet-mapping>
+
+
+
+
     <servlet>
         <servlet-name>AccessControllerAdd</servlet-name>
         <servlet-class>controller.access.AccessControllerAdd</servlet-class>
@@ -103,6 +125,7 @@
         <servlet-name>AccessControllerAdd</servlet-name>
         <url-pattern>/access/add</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>AccessControllerIndex</servlet-name>
         <servlet-class>controller.access.AccessControllerIndex</servlet-class>
@@ -111,6 +134,7 @@
         <servlet-name>AccessControllerIndex</servlet-name>
         <url-pattern>/access</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>AccessControllerView</servlet-name>
         <servlet-class>controller.access.AccessControllerView</servlet-class>
@@ -119,6 +143,7 @@
         <servlet-name>AccessControllerView</servlet-name>
         <url-pattern>/access/view</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>AccessControllerDelete</servlet-name>
         <servlet-class>controller.access.AccessControllerDelete</servlet-class>
@@ -127,6 +152,11 @@
         <servlet-name>AccessControllerDelete</servlet-name>
         <url-pattern>/access/delete</url-pattern>
     </servlet-mapping>
+
+
+
+
+
     <servlet>
         <servlet-name>UsersControllerTest</servlet-name>
         <servlet-class>controller.users.UsersControllerTest</servlet-class>
@@ -135,6 +165,8 @@
         <servlet-name>UsersControllerTest</servlet-name>
         <url-pattern>/users/test</url-pattern>
     </servlet-mapping>
+
+
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
