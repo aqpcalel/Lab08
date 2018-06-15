@@ -20,7 +20,7 @@ public class User {
 
     //Dirección de la imagen de perfil del Usuario
     @Persistent
-    private String userImgUrl;
+    private String imgUrl;
 
     //Email del usuario
     @Persistent
@@ -31,10 +31,10 @@ public class User {
     private Role role;
 
     //Constructor
-    public User(String id, String name, String userImgUrl, String email ,Role role){
+    public User(String id, String name, String imgUrl, String email ,Role role){
         this.id = id;
         this.name = name;
-        this.userImgUrl = userImgUrl;
+        this.imgUrl = imgUrl;
         this.email = email;
         this.role = role;
     }
@@ -52,11 +52,18 @@ public class User {
         this.name = name;
     }
 
-    public String getUserImgUrl() {
-        return userImgUrl;
+    public String getImgUrl() {
+        return imgUrl;
     }
-    public void setUserImgUrl(String userImgUrl) {
-        this.userImgUrl = userImgUrl;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Role getRole() {
