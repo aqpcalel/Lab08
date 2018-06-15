@@ -21,7 +21,6 @@ Please log in to continue:<br />
 You can Sign out here:
 <a href="#" onclick="signOut();">Sign out</a>
 
-
 <script>
     "use strict";
 
@@ -32,45 +31,38 @@ You can Sign out here:
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-        var userID = profile.getEmail().substr(0,profile.getEmail().search("@"));
-        console.log("User ID: " + userID);
+        postRedirect("/users/add",{
+            userEmail : profile.getEmail(),
+            userName : profile.getName(),
+            userImg : profile.getImageUrl(),
+            userRole : "admin",
+            action : "logIn"
+        });
+
+    }
+
+    function postRedirect(url, postData){
 
         var postForm = document.createElement("form");
-        postForm.action = "./users/add";
+        postForm.action = url;
         postForm.method = "POST";
 
-        var data = document.createElement("input");
-        data.type = "hidden";
-        data.name = "userID";
-        data.value = userID;
-        postForm.appendChild(data);
+        postForm.style.display = "none";
 
-        data = document.createElement("input");
-        data.type = "hidden";
-        data.name = "userName";
-        data.value = profile.getName();
-        postForm.appendChild(data);
-
-        data = document.createElement("input");
-        data.type = "hidden";
-        data.name = "userImg";
-        data.value = profile.getImageUrl();
-        postForm.appendChild(data);
-
-        data = document.createElement("input");
-        data.type = "hidden";
-        data.name = "userRole";
-        data.value = "admin";
-        postForm.appendChild(data);
-
-        data = document.createElement("input");
-        data.type = "hidden";
-        data.name = "logIn";
-        data.value = "logIn";
-        postForm.appendChild(data);
+        for (var key in postData){
+            if (postData.hasOwnProperty(key)){
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = key;
+                input.value = postData[key];
+                postForm.appendChild(input);
+            }
+        }
 
         document.body.appendChild(postForm);
+
         postForm.submit();
+
     }
 </script>
 <script>
