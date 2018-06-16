@@ -1,43 +1,93 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<title>Hotel Services</title>
+    <meta charset="UTF-8">
+    <title>Home - Hotel Service</title>
 
+    <link type="text/css" rel="stylesheet" href="./css/Diseno.css">
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="google-signin-client_id" content="746890482047-c734fgap3p3vb6bdoquufn60bsh2p8l9.apps.googleusercontent.com">
+
+    <style>
+        #mainHeader{
+            background: url('http://www.hotelimperialeroma.it/data/mobile/hotel-imperiale-roma-camere-01-2.jpg') no-repeat local center;
+            height: 40%;
+            text-align: center;
+            padding: 100px;
+            background-size: 100%;
+            overflow: hidden;
+
+            transition: opacity 500ms, max-height 250ms,padding 500ms;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: Roboto, serif;
+        }
+    </style>
+
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
-
 <body>
 
-<h1>Hotel Services.</h1>
+<div id="mainHeader">
+    <h1 style="font-size: 50px; color: white; display: inline; font-weight: bold; font-family: 'Product Sans',serif">Hotel Services</h1>
+</div>
+<nav style="background-color: #67c9b3">
+    <div class="nav-wrapper">
+        <a href="./" class="brand-logo" style="padding: 0 0 0 20px; font-family: 'Product Sans', Roboto, serif">Hotel Services</a>
+    </div>
+</nav>
 
-Please log in to continue:<br />
 <br />
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<div class="container">
 
-You can Sign out here:
-<a href="#" onclick="signOut();">Sign out</a>
+    <div style="font-size: x-large">
+        <span id="mainText">Welcome! Log In to Start:</span>
+        <br />
+        <br />
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+    <br />
+    <hr />
+    Developed by:<br />
+    Fernando Araoz, 2017337<br />
+    Jose Rodriguez, <br />
+    Gustavo Turpo, <br />
+
+
+</div>
+
+
 
 <script>
     "use strict";
 
     function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
-        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-        postRedirect("/users/add",{
-            userEmail : profile.getEmail(),
-            userName : profile.getName(),
-            userImg : profile.getImageUrl(),
-            userRole : "admin",
-            action : "logIn"
-        });
+        document.getElementById("mainText").innerText = "Logged In. Redirecting...";
+
+        document.getElementById("mainHeader").style.maxHeight = "0";
+        document.getElementById("mainHeader").style.padding = "0";
+
+        setTimeout(function () {
+            postRedirect("/users/add",{
+                userEmail : profile.getEmail(),
+                userName : profile.getName(),
+                userImg : profile.getImageUrl(),
+                userRole : "admin",
+                action : "logIn"
+            });
+        },500);
 
     }
 

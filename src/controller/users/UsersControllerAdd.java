@@ -18,8 +18,13 @@ public class UsersControllerAdd extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
         PersistenceManager pm = controller.PMF.get().getPersistenceManager();
+
+        //Accion a realizar
+        String action = request.getParameter("action");
+
+        if (action == null)
+            action = "";
 
         //Email del usuario
         String userEmail = request.getParameter("userEmail");
@@ -40,37 +45,34 @@ public class UsersControllerAdd extends HttpServlet {
         String userImg = request.getParameter("userImg");
         String userRole = request.getParameter("userRole");
 
-        //Accion a realizar
-        String action = request.getParameter("action");
-
-        if (action == null)
-            action = "";
-
 
         switch (action) {
             //Si se quiere iniciar sesion y/o registrar un usuario desde el inicio de sesion de Google
             case "logIn":
 
                 //Busca si ya existe una sesion iniciada
-                HttpSession misesion = request.getSession(true);
+                HttpSession misesion = request.getSession();
+
+                crearUsuario(userID, userEmail, userName, userImg, userRole, pm);
 
                 //Si no existe la sesion, la crea usando el ID del usuario
                 if (!sesionExist(misesion)) {
 
                     misesion = request.getSession(true);
                     misesion.setAttribute("userID", userID);
+                    System.out.println("Sesiones: luego de add -> " + misesion.getAttribute("userID"));
 
-                    //La sesion perdurara sin actividad durante 6 minutos
-                    misesion.setMaxInactiveInterval(360);
+                    //La sesion perdurara sin actividad durante 1h.
+                    misesion.setMaxInactiveInterval(3600);
                 }
-
-                crearUsuario(userID, userEmail, userName, userImg, userRole, pm);
 
                 break;
 
             //Si lo que se quiere es redirigir al Form para crear usuario
             case "redirect":
+                HttpSession sesion= request.getSession();
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/View/Users/Add.jsp");
+                request.setAttribute("User",UsersControllerView.getUser(sesion.getAttribute("userID").toString()));
                 dispatcher.forward(request, response);
                 break;
 
@@ -87,23 +89,20 @@ public class UsersControllerAdd extends HttpServlet {
                 user.setName(userName);
                 user.setEmail(userEmail);
                 user.setImgUrl(userImg);
-                user.setRole(new Role(userRole));
+                user.setRole(new Role(userRole,true));
 
                 break;
-            //Intenta eliminar un usario con el paramaetro userID
-            case "delete":
 
-                try{
-                    pm.deletePersistent(pm.getObjectById(User.class, userID));
-                } catch (JDOObjectNotFoundException e){
-                    e.printStackTrace();
-                }
-
-                break;
         }
 
         pm.close();
-        response.sendRedirect("/users");
+        try{
+            response.sendRedirect("/users");
+        }
+        //Al redirigr al jsp para crear, se usa RequestDispatcher, y este entra en conflicto con sendRedirect.
+        catch (IllegalStateException e){
+            System.err.println("IllegalStateException: There was a double redirect.");
+        }
 
 
     }
@@ -131,12 +130,13 @@ public class UsersControllerAdd extends HttpServlet {
     private boolean sesionExist(HttpSession sesion){
         try{
             //Intenta buscar el atributo userID dentro de la sesion
-            boolean a = sesion.getAttribute("userID").toString().isEmpty();
+            String a = sesion.getAttribute("userID").toString();
+            System.out.println("Sesion existe -> " + a);
             //Si lo encuentra, la sesion si existe
-            System.out.println("Session exists");
             return true;
         } catch (NullPointerException e){
             //Si no, la sesion no existe
+            System.out.println("Sesion no existe");
             return false;
         }
     }
@@ -144,19 +144,16 @@ public class UsersControllerAdd extends HttpServlet {
     private void crearUsuario(String userID, String userEmail, String userName, String userImg, String userRole, PersistenceManager pm){
 
         //Revisa si el usuario con su ID ya tiene un objeto User Persistente almacenado.
-        if (userExists(userID, pm)){
-            System.out.println("User exists!!!!");
-        }
         //Si no existe, crea el objeto de tipo User con los datos que se obtienen del request, y lo hace Persistente.
-        else {
+        if (!userExists(userID, pm)){
 
             //El new Role es provisional, hasta que termine la implementacion del CRUD de Role.
-            User user = new User(userID, userName, userImg, userEmail, new Role(userRole));
+            User user = new User(userID, userName, userImg, userEmail, new Role(userRole,true));
 
             try{
                 pm.makePersistent(user);
             } finally {
-                System.out.println("Usuario creado con exito.");
+                System.out.println("Usuario creado con exito -> " + user);
             }
 
         }

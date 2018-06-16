@@ -33,6 +33,8 @@ public class UsersControllerView extends HttpServlet {
         else if (action.equals("editRedirect") && userID != null){
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/View/Users/view.jsp");
             request.setAttribute("User",getUser(userID));
+            request.setAttribute("UserLogged",getUser(request.getSession().getAttribute("userID").toString()));
+
 
             //Ya que se quiere editar, el atributo permitirEdicion es verdadero. Este atributo se comprueba en el JSP.
             request.setAttribute("editAllowed",true);
@@ -47,6 +49,7 @@ public class UsersControllerView extends HttpServlet {
         else if (action.equals("viewRedirect") && userID != null){
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/View/Users/view.jsp");
             request.setAttribute("User",getUser(userID));
+            request.setAttribute("UserLogged",getUser(request.getSession().getAttribute("userID").toString()));
 
             //Ya que no quiere editar, el atributo permitirEdicion es falso. Este atributo se comprueba en el JSP.
             request.setAttribute("editAllowed",false);
@@ -79,10 +82,9 @@ public class UsersControllerView extends HttpServlet {
      * @see             User
      *
     * */
-    static User getUser(String userID){
+    public static User getUser(String userID){
         PersistenceManager pm = controller.PMF.get().getPersistenceManager();
         try{
-            System.out.println("UserID: " + userID);
             User user = pm.getObjectById(User.class, userID);
             pm.close();
             return user;
@@ -113,8 +115,7 @@ public class UsersControllerView extends HttpServlet {
      * Metodo closeSession
      *
      * Este metodo cierra la sesion actual y la sesion de Google. Primero, obtiene la sesion actual del objeto HttpSession y la elimina,
-     * e imprime la url desde la cual fue llamado. Esta url es la respuesta a la llamada que se hace mediante AJAX.
-     * Ver metodo signOut() en users/index.jsp
+     * e imprime un documento HTML basico, que se encarga de cerrar la sesion de Google y redirigir a la pagina de inicio.
      *
      *
      * @param request   Request
@@ -125,14 +126,19 @@ public class UsersControllerView extends HttpServlet {
         HttpSession sesion = request.getSession();
         sesion.invalidate();
         String urlRef = request.getRequestURL().toString();
-        try{
-            if (urlRef.contains("8/")){
-                response.getWriter().println(urlRef.substring(0,urlRef.indexOf("8/")+2));
-            } else {
-                response.getWriter().println(urlRef.substring(0,urlRef.indexOf("m/")+2));
-            }
-        } catch (IOException e){
+
+        if (urlRef.contains("8/")){
+            urlRef =(urlRef.substring(0,urlRef.indexOf("8/")+2));
+        } else {
+            urlRef = (urlRef.substring(0,urlRef.indexOf("m/")+2));
+        }
+
+        try {
+            response.getWriter().println("<html><head><script>window.location.replace(\"https://www.google.com/accounts/" +
+                    "Logout?continue=https://appengine.google.com/_ah/logout?continue=" + urlRef + "\");</script></head></html>");
+        }catch (IOException e){
             e.printStackTrace();
         }
+
     }
 }

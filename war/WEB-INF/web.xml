@@ -154,19 +154,6 @@
     </servlet-mapping>
 
 
-
-
-
-    <servlet>
-        <servlet-name>UsersControllerTest</servlet-name>
-        <servlet-class>controller.users.UsersControllerTest</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>UsersControllerTest</servlet-name>
-        <url-pattern>/users/test</url-pattern>
-    </servlet-mapping>
-
-
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>

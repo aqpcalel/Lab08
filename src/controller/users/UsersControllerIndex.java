@@ -1,7 +1,8 @@
 package controller.users;
 
+import model.User;
+
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.jdo.PersistenceManager;
 import javax.servlet.RequestDispatcher;
@@ -11,28 +12,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.google.appengine.api.users.User;
-import com.google.appengine.api.users.UserService;
-import com.google.appengine.api.users.UserServiceFactory;
-
 @SuppressWarnings("serial")
 public class UsersControllerIndex extends HttpServlet {
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        //Se usa para revisar si hay nua sesion activa
+        //Se usa para revisar si hay una sesion activa
         HttpSession sesion= request.getSession();
-        PersistenceManager pm = controller.PMF.get().getPersistenceManager();
 
         //Intenta hallar una sesion activa
         try{
-            request.setAttribute("User",UsersControllerView.getUser(sesion.getAttribute("userID").toString()));
+            User usario = UsersControllerView.getUser(sesion.getAttribute("userID").toString());
+            if (usario == null) throw new NullPointerException("UsersControllerIndex: El usuario recibido es nulo.");
+
+            request.setAttribute("User",usario);
             request.setAttribute("UsersList",UsersControllerView.getAllUsers());
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/View/Users/index.jsp");
             dispatcher.forward(request,response);
+
         }
         //Si no la encuentra, redirige a la pagina inicial.
         catch (Exception e){
-            e.printStackTrace();
+            System.err.println("Error catched. " + e.getMessage());
             response.getWriter().println("<html><head><script>window.location.replace(\"../\")</script></head><body></bodyy></html>");
         }
 
