@@ -15,6 +15,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * RolesControllerAdd
+ *
+ * Permite lo siguiente:
+ *
+ * Crear un Rol -> con el parametro action = create
+ * Redireccionar al form para crear un Rol -> parametro action = redirect
+ * Actualizar un Rol -> parametro action = update
+ *
+ *
+ *
+ * */
+
 @SuppressWarnings("serial")
 public class RolesControllerAdd extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,6 +41,7 @@ public class RolesControllerAdd extends HttpServlet {
             action = "";
 
         switch (action){
+            //Crea
             case "create":
 
                 String name = request.getParameter("roleName");
@@ -63,16 +77,6 @@ public class RolesControllerAdd extends HttpServlet {
 
                 break;
 
-            case "delete":
-
-                a = KeyFactory.stringToKey(request.getParameter("key"));
-
-                try{
-                    pm.deletePersistent(pm.getObjectById(Role.class, a));
-                } catch (JDOObjectNotFoundException e){
-                    e.printStackTrace();
-                }
-                break;
         }
 
         pm.close();
